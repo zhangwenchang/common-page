@@ -1,4 +1,4 @@
-package com.easyhi.common.page;
+package com.commons.page;
 
 import java.util.ArrayList;
 import java.util.Collection;
