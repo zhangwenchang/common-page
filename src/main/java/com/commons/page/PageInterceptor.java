@@ -166,9 +166,9 @@ public class PageInterceptor implements Interceptor {
 		}
 		StringBuilder sb = new StringBuilder();
 		if ("oracle".equals(dialect)) {
-			sb.append("SELECT * FROM (SELECT FFT_TMP_TB.*,ROWNUM ROW_ID FROM (");
+			sb.append("SELECT * FROM (SELECT TMP_TB.*,ROWNUM ROW_ID FROM (");
 			sb.append(sql);
-			sb.append(")  FFT_TMP_TB WHERE ROWNUM<=");
+			sb.append(")  TMP_TB WHERE ROWNUM<=");
 			sb.append(page.getStartIndex() + page.getPageSize());
 			sb.append(") WHERE ROW_ID>");
 			sb.append(page.getStartIndex());
